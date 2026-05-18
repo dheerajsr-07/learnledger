@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login | ResumeAlien</title>
+    <link rel="stylesheet" href="assets/styles.css" />
+  </head>
+  <body class="auth-page">
+    <main class="auth-shell">
+      <form class="auth-card" data-login-form>
+        <a class="brand centered" href="index.html">
+          <span class="logo"><span class="alien"><span class="mouth"></span></span></span>
+          <span>ResumeAlien</span>
+        </a>
+        <h1>Welcome back</h1>
+        <p>Login to continue to your resume parser dashboard.</p>
+        <div class="segmented">
+          <button type="button" class="selected" data-login-type="user">User Login</button>
+          <button type="button" data-login-type="admin">Admin Login</button>
+        </div>
+        <input required type="email" name="email" placeholder="Email field" autocomplete="email" />
+        <input required type="password" name="password" placeholder="Password field" autocomplete="current-password" />
+        <label class="checkline"><input type="checkbox" name="remember" /> Remember Me <a href="register.html">Forgot Password?</a></label>
+        <button class="primary full" type="submit">Login</button>
+        <p class="form-message" data-auth-message></p>
+        <a class="link-button" href="register.html">Create a new account</a>
+      </form>
+    </main>
+    <script src="assets/app.js"></script>
+  </body>
+</html>

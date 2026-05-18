@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard | ResumeAlien</title>
+    <link rel="stylesheet" href="assets/styles.css" />
+  </head>
+  <body class="dashboard-page">
+    <main class="dashboard">
+      <aside class="sidebar" data-sidebar>
+        <a class="brand" href="index.html">
+          <span class="logo"><span class="alien"><span class="mouth"></span></span></span>
+          <span>ResumeAlien</span>
+        </a>
+        <button class="side-link active" data-view="home">Dashboard Home</button>
+        <button class="side-link" data-view="upload">Upload Resume</button>
+        <button class="side-link" data-view="parsed">Parsed Resumes</button>
+        <button class="side-link" data-view="ats">ATS Analysis</button>
+        <button class="side-link" data-view="skills">Skills Analysis</button>
+        <button class="side-link" data-view="jobs">Job Recommendations</button>
+        <button class="side-link" data-view="templates">Resume Templates</button>
+        <button class="side-link" data-view="notifications">Notifications</button>
+        <button class="side-link" data-view="profile">Profile</button>
+        <button class="side-link" data-view="settings">Settings</button>
+        <button class="side-link admin-only" data-view="admin">Admin Panel</button>
+        <button class="side-link danger-text" data-logout>Logout</button>
+      </aside>
+
+      <section class="dash-main">
+        <header class="dash-top">
+          <button class="menu-button" data-sidebar-toggle>☰</button>
+          <div>
+            <span class="label">Workspace</span>
+            <h1 data-page-title>Dashboard Home</h1>
+          </div>
+          <button class="secondary small" data-theme-toggle>Dark Mode</button>
+        </header>
+
+        <section class="view active" data-panel="home">
+          <div class="dashboard-grid">
+            <article class="card stat"><span>Total Resumes Uploaded</span><strong data-total-resumes>0</strong></article>
+            <article class="card stat"><span>ATS Score Average</span><strong data-average-ats>0%</strong></article>
+            <article class="card stat"><span>Skills Detected</span><strong data-skill-count>0</strong></article>
+            <article class="card stat"><span>Recommended Jobs</span><strong>12</strong></article>
+            <article class="card stat"><span>Resume Completion</span><strong data-completion>0%</strong></article>
+            <article class="card stat"><span>Recent Uploads</span><strong data-recent-count>0</strong></article>
+          </div>
+          <div class="split top-gap">
+            <article class="panel">
+              <h2>Charts and Statistics</h2>
+              <div class="chart" data-chart></div>
+            </article>
+            <article class="panel">
+              <h2>Activity Timeline</h2>
+              <div data-activity></div>
+            </article>
+          </div>
+        </section>
+
+        <section class="view" data-panel="upload">
+          <article class="panel">
+            <h2>Resume Upload Page</h2>
+            <label class="upload-box" data-drop-zone>
+              <input type="file" accept=".pdf,.docx,.txt" data-file-input />
+              <strong>Drag and drop or click to upload PDF, DOCX, or TXT</strong>
+              <span>File preview, progress bar, validation, and resume history work locally.</span>
+            </label>
+            <div class="file-preview" data-file-preview>No file selected</div>
+            <div class="progress"><span data-upload-progress></span></div>
+            <button class="primary top-gap" data-parse-button>Parse Resume</button>
+            <p class="form-message" data-upload-message></p>
+          </article>
+        </section>
+
+        <section class="view" data-panel="parsed">
+          <article class="panel">
+            <h2>Extracted Resume Data</h2>
+            <div class="data-table" data-parsed-table></div>
+          </article>
+        </section>
+
+        <section class="view" data-panel="ats">
+          <div class="split">
+            <article class="panel">
+              <h2>ATS Score Meter</h2>
+              <div class="score" style="--score:0%" data-score-ring><strong data-ats-score>0</strong><small>ATS Score</small></div>
+              <p data-ats-summary>Upload a resume to generate ATS analysis.</p>
+            </article>
+            <article class="panel">
+              <h2>Resume Strength Analysis</h2>
+              <div data-ats-bars></div>
+              <h3>Missing Keywords</h3>
+              <p data-missing-keywords>None yet.</p>
+              <h3>Improvement Suggestions</h3>
+              <p data-suggestions>Upload a resume first.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="view" data-panel="skills">
+          <article class="panel">
+            <h2>Skills Analysis</h2>
+            <div data-skill-bars></div>
+            <p class="top-gap" data-ai-insight>Upload a resume to see AI insights.</p>
+          </article>
+        </section>
+
+        <section class="view" data-panel="jobs">
+          <article class="panel">
+            <div class="toolbar">
+              <input placeholder="Filter by location, salary, experience, skills" data-job-filter />
+              <button class="secondary small" data-clear-filter>Clear</button>
+            </div>
+            <div class="job-grid top-gap" data-job-list></div>
+          </article>
+        </section>
+
+        <section class="view" data-panel="templates">
+          <div class="template-grid">
+            <article class="card template"><div class="template-preview"><span></span><span></span><span></span></div><h3>Modern</h3><input type="color" value="#00a86b" /><button class="primary">Download PDF</button></article>
+            <article class="card template"><div class="template-preview"><span></span><span></span><span></span></div><h3>Professional</h3><input type="color" value="#047857" /><button class="primary">Download PDF</button></article>
+            <article class="card template"><div class="template-preview"><span></span><span></span><span></span></div><h3>Creative</h3><input type="color" value="#8b5cf6" /><button class="primary">Download PDF</button></article>
+            <article class="card template"><div class="template-preview"><span></span><span></span><span></span></div><h3>Minimal</h3><input type="color" value="#101828" /><button class="primary">Download PDF</button></article>
+          </div>
+        </section>
+
+        <section class="view" data-panel="notifications">
+          <article class="panel">
+            <h2>Notifications</h2>
+            <div data-notifications></div>
+          </article>
+        </section>
+
+        <section class="view" data-panel="profile">
+          <form class="panel form-grid" data-profile-form>
+            <h2>Profile</h2>
+            <input name="fullName" placeholder="Full Name" />
+            <input name="email" type="email" placeholder="Email" />
+            <input name="phone" placeholder="Phone" />
+            <input name="password" type="password" placeholder="Update password" />
+            <button class="primary" type="submit">Update Profile</button>
+            <p class="form-message" data-profile-message></p>
+          </form>
+        </section>
+
+        <section class="view" data-panel="settings">
+          <article class="panel settings-list">
+            <h2>Settings</h2>
+            <label><span>Dark / Light mode</span><input type="checkbox" data-dark-checkbox /></label>
+            <label><span>Notification preferences</span><input type="checkbox" checked /></label>
+            <label><span>Privacy settings</span><select><option>Private</option><option>Recruiter visible</option></select></label>
+            <label><span>Language selection</span><select><option>English</option><option>Hindi</option><option>Spanish</option></select></label>
+            <button class="danger" data-delete-account>Delete Account</button>
+          </article>
+        </section>
+
+        <section class="view" data-panel="admin">
+          <div class="dashboard-grid">
+            <article class="card stat"><span>Manage users</span><strong data-user-count>1</strong></article>
+            <article class="card stat"><span>Uploaded resumes</span><strong data-admin-resumes>0</strong></article>
+            <article class="card stat"><span>Reports</span><strong data-admin-reports>0</strong></article>
+            <article class="card stat"><span>Job postings</span><strong>24</strong></article>
+            <article class="card stat"><span>Revenue analytics</span><strong>$29k</strong></article>
+            <article class="card stat"><span>Platform statistics</span><strong>99.9%</strong></article>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <script src="assets/app.js"></script>
+  </body>
+</html>

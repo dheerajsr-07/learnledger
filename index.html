@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ResumeAlien | AI Resume Parser Engine</title>
+    <link rel="stylesheet" href="assets/styles.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <a class="brand" href="index.html" aria-label="ResumeAlien home">
+        <span class="logo"><span class="alien"><span class="mouth"></span></span></span>
+        <span>ResumeAlien</span>
+      </a>
+      <button class="menu-button" data-menu-button aria-label="Open menu">☰</button>
+      <nav class="nav" data-nav>
+        <a href="index.html">Home</a>
+        <a href="#features">Features</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <a href="login.html">Login</a>
+        <a class="primary small" href="register.html">Register</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="video-alien" aria-hidden="true">
+          <div class="float-card card-a">PDF Parsed</div>
+          <div class="float-card card-b">ATS 92%</div>
+          <div class="float-card card-c">18 Jobs</div>
+        </div>
+        <div class="hero-content">
+          <span class="eyebrow">AI hiring intelligence</span>
+          <h1>AI-Powered Resume Parser Engine</h1>
+          <p>Upload resumes and instantly extract candidate skills, education, experience, ATS score, and job recommendations using AI.</p>
+          <div class="actions">
+            <a class="primary" href="login.html">Get Started</a>
+            <a class="secondary" href="login.html">Upload Resume</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="features" class="section">
+        <div class="section-title">
+          <span>Features</span>
+          <h2>Everything needed to turn resumes into structured hiring data.</h2>
+        </div>
+        <div class="grid-4">
+          <article class="card"><span class="icon">✦</span><h3>Resume Parsing</h3><p>Extract full name, email, phone, address, skills, education, certifications, work history, projects, languages, LinkedIn, and GitHub.</p></article>
+          <article class="card"><span class="icon">◉</span><h3>ATS Analyzer</h3><p>Score resumes using keywords, formatting, readability, skills matching, and experience relevance.</p></article>
+          <article class="card"><span class="icon">⚡</span><h3>AI Career Tools</h3><p>Create resume summaries, skill suggestions, improvement tips, career recommendations, and cover letters.</p></article>
+          <article class="card"><span class="icon">▣</span><h3>Secure Flow</h3><p>Static demo uses localStorage login. The included backend adds JWT, bcrypt, MongoDB, Multer, and protected APIs.</p></article>
+        </div>
+      </section>
+
+      <section class="section split">
+        <article class="panel">
+          <span class="label">Resume Parsing Demo</span>
+          <h2>Beautiful structured extraction.</h2>
+          <div class="demo-list">
+            <div class="chip"><span>Full Name</span><strong>Extracted</strong></div>
+            <div class="chip"><span>Email</span><strong>Detected</strong></div>
+            <div class="chip"><span>Phone</span><strong>Detected</strong></div>
+            <div class="chip"><span>Skills</span><strong>24 found</strong></div>
+            <div class="chip"><span>Education</span><strong>Parsed</strong></div>
+            <div class="chip"><span>GitHub</span><strong>Linked</strong></div>
+          </div>
+        </article>
+        <article class="panel">
+          <span class="label">ATS Score Demo</span>
+          <h2>Compatibility in seconds.</h2>
+          <div class="score" style="--score:92%"><strong>92</strong><small>ATS Score</small></div>
+          <p>Matched target keywords with strong readability, clean formatting, and relevant experience signals.</p>
+        </article>
+      </section>
+
+      <section id="pricing" class="section">
+        <div class="section-title"><span>Pricing</span><h2>Plans for job seekers, recruiters, and hiring teams.</h2></div>
+        <div class="grid-3">
+          <article class="price"><h3>Starter</h3><strong>$0</strong><p>25 parses per month, ATS score, and basic job matches.</p><a class="secondary" href="register.html">Choose Plan</a></article>
+          <article class="price featured"><h3>Growth</h3><strong>$29</strong><p>500 parses per month, AI recommendations, templates, and reports.</p><a class="primary" href="register.html">Choose Plan</a></article>
+          <article class="price"><h3>Enterprise</h3><strong>Custom</strong><p>Unlimited workflows, admin analytics, integrations, and support.</p><a class="secondary" href="register.html">Choose Plan</a></article>
+        </div>
+      </section>
+
+      <section id="about" class="section grid-3">
+        <article class="card"><blockquote>Cut screening time by 70%.<span>Recruiter team</span></blockquote></article>
+        <article class="card"><blockquote>The ATS insights are clear and actionable.<span>Career coach</span></blockquote></article>
+        <article class="card"><blockquote>Our candidates finally get structured data instantly.<span>Hiring platform</span></blockquote></article>
+      </section>
+
+      <section class="section">
+        <details open><summary>Can it parse DOCX and PDF?</summary><p>Yes. The static dashboard simulates parsing locally, and the included backend has real Multer upload routes for PDF/DOCX parsing.</p></details>
+        <details><summary>Is my data secure?</summary><p>The static demo stores data in your browser only. The production backend includes JWT protection, bcrypt password hashing, rate limiting, and input sanitization.</p></details>
+        <details><summary>Does Get Started open login?</summary><p>Yes. Get Started takes users to login. Successful login opens the dashboard.</p></details>
+      </section>
+
+      <section id="contact" class="section contact">
+        <div>
+          <span class="label">Contact</span>
+          <h2>Build a sharper hiring pipeline.</h2>
+          <p>Send a message and the form will confirm locally so it works from files.</p>
+        </div>
+        <form data-contact-form>
+          <input required placeholder="Name" />
+          <input required type="email" placeholder="Email" />
+          <textarea required placeholder="Tell us what you need"></textarea>
+          <button class="primary" type="submit">Send Message</button>
+          <p class="form-message" data-contact-message></p>
+        </form>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span class="logo"><span class="alien"><span class="mouth"></span></span></span>
+      <strong>ResumeAlien</strong>
+      <p>AI resume parsing, ATS scoring, and job intelligence.</p>
+    </footer>
+
+    <script src="assets/app.js"></script>
+  </body>
+</html>
