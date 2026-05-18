@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register | ResumeAlien</title>
+    <link rel="stylesheet" href="assets/styles.css" />
+  </head>
+  <body class="auth-page">
+    <main class="auth-shell">
+      <form class="auth-card" data-register-form>
+        <a class="brand centered" href="index.html">
+          <span class="logo"><span class="alien"><span class="mouth"></span></span></span>
+          <span>ResumeAlien</span>
+        </a>
+        <h1>Create your account</h1>
+        <input required name="fullName" placeholder="Full Name" />
+        <input required type="email" name="email" placeholder="Email" autocomplete="email" />
+        <input required name="phone" placeholder="Phone Number" />
+        <input required type="password" name="password" placeholder="Password" autocomplete="new-password" data-password />
+        <input required type="password" name="confirmPassword" placeholder="Confirm Password" autocomplete="new-password" />
+        <div class="strength"><span data-strength-bar></span></div>
+        <small data-strength-text>Password strength</small>
+        <select name="role">
+          <option value="Job Seeker">Job Seeker</option>
+          <option value="Recruiter">Recruiter</option>
+        </select>
+        <button class="primary full" type="submit">Register</button>
+        <p class="form-message" data-auth-message></p>
+        <a class="link-button" href="login.html">Already registered? Login</a>
+      </form>
+    </main>
+    <script src="assets/app.js"></script>
+  </body>
+</html>

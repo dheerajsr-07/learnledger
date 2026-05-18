@@ -1,0 +1,19 @@
+{
+  "name": "resume-parser-engine",
+  "version": "1.0.0",
+  "private": true,
+  "description": "AI-powered resume parser engine with React, Express, MongoDB, JWT auth, and Multer uploads.",
+  "scripts": {
+    "dev": "concurrently \"npm run dev --workspace client\" \"npm run dev --workspace server\"",
+    "install:all": "npm install --workspaces",
+    "build": "npm run build --workspace client",
+    "start": "npm run start --workspace server"
+  },
+  "workspaces": [
+    "client",
+    "server"
+  ],
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
